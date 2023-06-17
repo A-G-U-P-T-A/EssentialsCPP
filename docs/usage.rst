@@ -9,3 +9,4 @@ This section covers how to use some of the key features of EssentialCPP.
 
    features/asymmetric
    features/message_digest
+   features/array_util_library
