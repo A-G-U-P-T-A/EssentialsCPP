@@ -1,168 +1,469 @@
-Redis Client
-============
+================================
+Redis Library
+================================
 
-This page describes the `URedisClient` methods that are used for interacting with a Redis database. 
+Redis is an in-memory data structure store that can be used as a database, cache, and message broker. The following functions provide a set of operations to interact with Redis using the provided library.
 
-URedisClient Methods
---------------------
+Connect
+---------------------------
 
-**Connect**
+Attempts to establish a connection to the Redis server with the specified host and port.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Host*: The hostname or IP address of the Redis server.
+  - *Port*: The port number on which the Redis server is running.
 
-   bool URedisClient::Connect(const FString& Host, int32 Port)
+* **Return Value:**
+  - A boolean indicating whether the connection was successfully established.
 
-Establishes a connection to a Redis server.
+Disconnect
+---------------------------
 
-**Disconnect**
+Closes the connection to the Redis server.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - None.
 
-   void URedisClient::Disconnect()
+* **Return Value:**
+  - None.
 
-Disconnects from the Redis server.
+Reconnect
+---------------------------
 
-**Reconnect**
+Closes the current connection (if any) and attempts to reconnect to the Redis server.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - None.
 
-   void URedisClient::Reconnect()
+* **Return Value:**
+  - None.
 
-Attempts to reconnect to the Redis server.
+IsConnected
+---------------------------
 
-**Set**
+Checks if there is an active connection to the Redis server.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - None.
 
-   bool URedisClient::Set(const FString& Key, const FString& Value)
+* **Return Value:**
+  - A boolean indicating whether a connection to the Redis server is active.
 
-Sets the value of a given key in Redis.
+Set
+---------------------------
 
-**Get**
+Sets the value of a key in Redis.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
+  - *Value*: The value to be stored.
 
-   bool URedisClient::Get(const FString& Key, FString& Value)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Retrieves the value associated with a given key from Redis.
+Get
+---------------------------
 
-**Delete**
+Retrieves the value of a key from Redis.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
+  - *Value*: The retrieved value will be stored in this output parameter.
 
-   bool URedisClient::Delete(const FString& Key)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Deletes the specified key from Redis.
+Delete
+---------------------------
 
-**Exists**
+Deletes a key from Redis.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
 
-   bool URedisClient::Exists(const FString& Key)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Checks the existence of the specified key in Redis.
+Exists
+---------------------------
 
-**Expire**
+Checks if a key exists in Redis.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
 
-   bool URedisClient::Expire(const FString& Key, int32 Seconds)
+* **Return Value:**
+  - A boolean indicating whether the key exists.
 
-Sets an expiration time for the specified key in Redis.
+Expire
+---------------------------
 
-**TTL**
+Sets an expiration time (in seconds) for a key in Redis.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
+  - *Seconds*: The number of seconds after which the key will expire.
 
-   int64 URedisClient::TTL(const FString& Key)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Retrieves the remaining time-to-live for the specified key in Redis.
+TTL
+---------------------------
 
-**IsConnected**
+Gets the remaining time to live (in seconds) of a key in Redis.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
 
-   bool URedisClient::IsConnected() const
+* **Return Value:**
+  - The remaining time to live of the key, or -2 if the key does not exist or has no associated expire.
 
-Checks if the Redis client is connected to the Redis server.
+Append
+---------------------------
 
-**Append**
+Appends a value to an existing key in Redis.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
+  - *Value*: The value to be appended.
 
-   bool URedisClient::Append(const FString& Key, const FString& Value)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Appends the given value to the existing value associated with the specified key in Redis.
+Increment
+---------------------------
 
-**Increment**
+Increments the value of a key in Redis by 1.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
+  - *Value*: The incremented value will be stored in this output parameter.
 
-   bool URedisClient::Increment(const FString& Key, int32& Value)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Increments the value of the specified key in Redis by 1.
+Decrement
+---------------------------
 
-**Decrement**
+Decrements the value of a key in Redis by 1.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
+  - *Value*: The decremented value will be stored in this output parameter.
 
-   bool URedisClient::Decrement(const FString& Key, int32& Value)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Decrements the value of the specified key in Redis by 1.
+IncrementBy
+---------------------------
 
-**IncrementBy**
+Increments the value of a key in Redis by a specified amount.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
+  - *Increment*: The amount by which to increment the value.
+  - *Value*: The incremented value will be stored in this output parameter.
 
-   bool URedisClient::IncrementBy(const FString& Key, int32 Increment, int32& Value)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Increments the value of the specified key in Redis by the given increment value.
+DecrementBy
+---------------------------
 
-**DecrementBy**
+Decrements the value of a key in Redis by a specified amount.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the key.
+  - *Decrement*: The amount by which to decrement the value.
+  - *Value*: The decremented value will be stored in this output parameter.
 
-   bool URedisClient::DecrementBy(const FString& Key, int32 Decrement, int32& Value)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Decrements the value of the specified key in Redis by the given decrement value.
+HSet
+---------------------------
 
-**HSet**
+Sets the value of a field in a Redis hash.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the hash.
+  - *Field*: The name of the field.
+  - *Value*: The value to be set.
 
-   bool URedisClient::HSet(const FString& Key, const FString& Field, const FString& Value)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Sets the value for the specified field in the hash stored at the given key in Redis.
+HGet
+---------------------------
 
-**HGet**
+Retrieves the value of a field from a Redis hash.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the hash.
+  - *Field*: The name of the field.
+  - *Value*: The retrieved value will be stored in this output parameter.
 
-   bool URedisClient::HGet(const FString& Key, const FString& Field, FString& Value)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Retrieves the value of the specified field in the hash stored at the given key in Redis.
+HDel
+---------------------------
 
-**HDel**
+Deletes a field from a Redis hash.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the hash.
+  - *Field*: The name of the field.
 
-   bool URedisClient::HDel(const FString& Key, const FString& Field)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Deletes the specified field from the hash stored at the given key in Redis.
+HGetAll
+---------------------------
 
-**HGetAll**
+Retrieves all fields and values from a Redis hash.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the hash.
+  - *Fields*: The retrieved fields and values will be stored in this output parameter.
 
-   bool URedisClient::HGetAll(const FString& Key, TMap<FString, FString>& Fields)
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
 
-Retrieves all field-value pairs from the hash stored at the given key in Redis.
+HExists
+---------------------------
 
-**HExists**
+Checks if a field exists in a Redis hash.
 
-.. code-block:: cpp
+* **Input Parameters:**
+  - *Key*: The name of the hash.
+  - *Field*: The name of the field.
 
-   bool URedisClient::HExists(const FString& Key, const FString& Field)
+* **Return Value:**
+  - A boolean indicating whether the field exists.
 
-Checks if the specified field exists in the hash stored at the given key
+HIncrBy
+---------------------------
 
+Increments the value of a field in a Redis hash by a specified amount.
+
+* **Input Parameters:**
+  - *Key*: The name of the hash.
+  - *Field*: The name of the field.
+  - *Increment*: The amount by which to increment the value.
+  - *Value*: The incremented value will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+LPush
+---------------------------
+
+Inserts one or more values at the beginning of a Redis list.
+
+* **Input Parameters:**
+  - *Key*: The name of the list.
+  - *Value*: The value to be inserted.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+RPush
+---------------------------
+
+Inserts one or more values at the end of a Redis list.
+
+* **Input Parameters:**
+  - *Key*: The name of the list.
+  - *Value*: The value to be inserted.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+LPop
+---------------------------
+
+Removes and retrieves the first element from a Redis list.
+
+* **Input Parameters:**
+  - *Key*: The name of the list.
+  - *Value*: The removed value will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+RPop
+---------------------------
+
+Removes and retrieves the last element from a Redis list.
+
+* **Input Parameters:**
+  - *Key*: The name of the list.
+  - *Value*: The removed value will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+LLen
+---------------------------
+
+Gets the length of a Redis list.
+
+* **Input Parameters:**
+  - *Key*: The name of the list.
+  - *Length*: The length of the list will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+LRange
+---------------------------
+
+Retrieves a range of elements from a Redis list.
+
+* **Input Parameters:**
+  - *Key*: The name of the list.
+  - *Start*: The starting index of the range.
+  - *Stop*: The ending index of the range.
+  - *Values*: The retrieved values will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+LIndex
+---------------------------
+
+Retrieves an element from a Redis list by its index.
+
+* **Input Parameters:**
+  - *Key*: The name of the list.
+  - *Index*: The index of the element.
+  - *Value*: The retrieved value will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+SAdd
+---------------------------
+
+Adds a member to a Redis set.
+
+* **Input Parameters:**
+  - *Key*: The name of the set.
+  - *Member*: The member to be added.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+SRem
+---------------------------
+
+Removes a member from a Redis set.
+
+* **Input Parameters:**
+  - *Key*: The name of the set.
+  - *Member*: The member to be removed.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+SCard
+---------------------------
+
+Gets the number of members in a Redis set.
+
+* **Input Parameters:**
+  - *Key*: The name of the set.
+  - *Size*: The size of the set will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+SIsMember
+---------------------------
+
+Checks if a member exists in a Redis set.
+
+* **Input Parameters:**
+  - *Key*: The name of the set.
+  - *Member*: The member to be checked.
+
+* **Return Value:**
+  - A boolean indicating whether the member exists in the set.
+
+SMembers
+---------------------------
+
+Retrieves all members of a Redis set.
+
+* **Input Parameters:**
+  - *Key*: The name of the set.
+  - *Members*: The retrieved members will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+ZAdd
+---------------------------
+
+Adds a member with a score to a Redis sorted set.
+
+* **Input Parameters:**
+  - *Key*: The name of the sorted set.
+  - *Member*: The member to be added.
+  - *Score*: The score associated with the member.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+ZRem
+---------------------------
+
+Removes a member from a Redis sorted set.
+
+* **Input Parameters:**
+  - *Key*: The name of the sorted set.
+  - *Member*: The member to be removed.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+ZCard
+---------------------------
+
+Gets the number of members in a Redis sorted set.
+
+* **Input Parameters:**
+  - *Key*: The name of the sorted set.
+  - *Size*: The size of the sorted set will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+ZRange
+---------------------------
+
+Retrieves a range of members from a Redis sorted set by their scores.
+
+* **Input Parameters:**
+  - *Key*: The name of the sorted set.
+  - *Start*: The starting index of the range.
+  - *Stop*: The ending index of the range.
+  - *Members*: The retrieved members will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
+
+ZRevRange
+---------------------------
+
+Retrieves a range of members from a Redis sorted set by their scores in reverse order.
+
+* **Input Parameters:**
+  - *Key*: The name of the sorted set.
+  - *Start*: The starting index of the range.
+  - *Stop*: The ending index of the range.
+  - *Members*: The retrieved members will be stored in this output parameter.
+
+* **Return Value:**
+  - A boolean indicating whether the operation was successful.
