@@ -1,7 +1,7 @@
 Time Dilation Component
 =======================
 
-.. image:: images/TimeDilation.PNG
+.. image:: images/TimeDilation.JPG
 
 Slow Down Time For Actors Except
 --------------------------------
