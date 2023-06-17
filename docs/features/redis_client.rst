@@ -2,6 +2,9 @@
 Redis Library
 ================================
 
+.. image:: images/redis1.JPG
+.. image:: images/redis2.JPG
+
 Redis is an in-memory data structure store that can be used as a database, cache, and message broker. The following functions provide a set of operations to interact with Redis using the provided library.
 
 Connect
