@@ -24,6 +24,8 @@ Input Parameters:
 Time Reversal Component
 =======================
 
+.. image:: images/ReverseTime.JPG
+
 Begin Play
 ----------
 

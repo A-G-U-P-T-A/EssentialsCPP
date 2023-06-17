@@ -7,6 +7,8 @@ The Asymmetric Crypto Library is a component of EssentialCPP that provides RSA e
 RSA Encrypt
 -------------------
 
+.. image:: images/RSAE.PNG
+
 This function encrypts the input data using RSA encryption and the provided public key. It first converts the public key to a BIO object, reads the public key, and then encrypts the input data using the RSA_PKCS1_PADDING scheme. The resulting encrypted output is returned as a string.
 
 * **Input Parameters:**
@@ -19,6 +21,8 @@ This function encrypts the input data using RSA encryption and the provided publ
 
 RSA Decrypt
 -------------------
+
+.. image:: images/RSAD.PNG
 
 The RSA_Decrypt function decrypts the input data using RSA decryption with the provided private key. It first decodes the input from Base64, reads the private key, and then performs the RSA decryption using RSA_PKCS1_PADDING scheme. The decrypted output is returned as an FString.
 

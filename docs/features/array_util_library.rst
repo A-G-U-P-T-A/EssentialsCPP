@@ -1,6 +1,8 @@
 Array Util Library
 ==================
 
+.. image:: images/ArrayUtilities.JPG
+
 GET AVERAGE OF ARRAY
 --------------------
 

@@ -2,6 +2,8 @@
 Message Digest Library
 ================================
 
+.. image:: images/MessageDigest.PNG
+
 This feature of EssentialCPP provides a method to generate hash values for your data. It is flexible and can handle both string and file inputs. 
 
 Generate Hash String

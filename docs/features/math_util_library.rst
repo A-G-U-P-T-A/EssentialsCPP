@@ -1,6 +1,8 @@
 Math Util Library
 =================
 
+.. image:: images/Math.PNG
+
 Get Ratio Float
 ---------------
 

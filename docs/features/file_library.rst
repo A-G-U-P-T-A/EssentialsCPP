@@ -1,6 +1,8 @@
 File Library
 ============
 
+.. image:: images/Files.JPG
+
 Copy Directory
 --------------
 
