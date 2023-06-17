@@ -12,3 +12,4 @@ This section covers how to use some of the key features of EssentialCPP.
    features/message_digest
    features/array_util_library
    features/math_util_library
+   features/time_manipulation
