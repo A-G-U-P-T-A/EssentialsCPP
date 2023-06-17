@@ -17,3 +17,4 @@ This section covers how to use some of the key features of EssentialCPP.
    features/universal_interaction
    features/redis_client
    features/ds
+   features/miscelleneous
