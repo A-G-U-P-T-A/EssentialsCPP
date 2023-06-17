@@ -28,3 +28,15 @@ The RSA_Decrypt function decrypts the input data using RSA decryption with the p
 
 * **Return Value:**
   - An FString containing the decrypted output, or an empty FString if an error occurs.
+
+RSA Generate Key Pair
+----------------------------
+
+This function is part of the UASymmetricCryptoLibrary. It is used to generate a key pair for the RSA asymmetric encryption algorithm. The function takes a KeySize parameter to specify the desired size of the key. It generates an RSA key pair using the specified key size and stores the resulting public and private keys in the provided PublicKey and PrivateKey variables, respectively. The keys are converted to strings using the PEM format and stored as FString objects. If an error occurs during key generation, the function sets both PublicKey and PrivateKey to empty strings.
+
+* **Input Parameters:**
+  - *KeySize (int32)*: The size of the key to be generated.
+
+* **Return Value:**
+  - *PublicKey (FString&)*: The generated public key as a string.
+  - *PrivateKey (FString&)*: The generated private key as a string.
