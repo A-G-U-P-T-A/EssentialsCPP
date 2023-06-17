@@ -1,5 +1,5 @@
 ================================
-MISCELLENEOUS Features
+Miscelleneous Features
 ================================
 
 
@@ -61,16 +61,10 @@ Input Parameters: None
 
 Return Value: None
 
-**InitNightVision**
-
-Initializes the night vision effect by obtaining the camera component from the owner actor and storing the original post-process settings.
-
-Input Parameters: None
-
-Return Value: None
-
 Torch Component
 ---------------------------
+
+.. image:: images/Torch.PNG
 
 **ToggleTorch**
 
