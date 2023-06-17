@@ -294,3 +294,32 @@ TArray<int32> / TArray<float> / TArray<int64> / TArray<uint8> / TArray<FString> 
 
 This method calculates the difference between two arrays, ArrayA and ArrayB.
 
+CLAMP
+-----
+
+**Input Parameters:**
+
+* InArray (const TArray<int32>&): The input array of integers.
+* InArray (const TArray<float>&): The input array of floating-point numbers.
+* InArray (const TArray<uint8>&): The input array of unsigned 8-bit integers.
+* InArray (const TArray<int64>&): The input array of 64-bit integers.
+* InArray (const TArray<FVector>&): The input array of 3D vectors.
+* Min (int32 / float / uint8 / int64): The minimum value to clamp the elements to.
+* Max (int32 / float / uint8 / int64): The maximum value to clamp the elements to.
+* MinSize (float): The minimum size to clamp the vectors to.
+* MaxSize (float): The maximum size to clamp the vectors to.
+* Only2D (bool): Determines whether clamping should be applied only to the 2D components of the vectors.
+
+**Return Value:**
+
+TArray<int32> / TArray<float> / TArray<uint8> / TArray<int64> / TArray<FVector> - The clamped elements or vectors.
+
+**Function Purpose:**
+
+This method clamps the elements or vectors in the input array, InArray, to the specified minimum and maximum values.
+
+For int32, float, uint8, and int64 arrays, the method uses the UArrayUtilLibraryGeneric class to perform the clamping operation. Each element in the array is checked against the provided minimum and maximum values, and if it exceeds those bounds, it is clamped to the nearest limit.
+
+For FVector arrays, the method iterates through the elements of InArray and applies clamping based on the specified parameters. If the Only2D flag is set to true, the clamping is applied only to the X and Y components of the vectors, while the Z component remains unchanged. The size of each vector is also clamped between the provided MinSize and MaxSize values. The resulting clamped vectors are added to the output array, which is then returned.
+
+
