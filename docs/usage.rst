@@ -8,6 +8,6 @@ This section covers how to use some of the key features of EssentialCPP.
    :maxdepth: 2
 
    features/asymmetric
-    features/symmetric
+   features/symmetric
    features/message_digest
    features/array_util_library
