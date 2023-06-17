@@ -2,6 +2,9 @@
 Introduction
 =====================
 
+.. image:: image/Plugin.png
+   :alt: Image Description
+
 Unlock an unparalleled suite of functionalities with **EssentialCPP**, the most comprehensive plugin designed to supercharge your projects.
 
 Overview
