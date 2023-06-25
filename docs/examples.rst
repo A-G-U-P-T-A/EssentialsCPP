@@ -69,6 +69,6 @@ Add the night vision component to the player character. Then do the following:
 
 .. image:: features/images/CodeForNightVision.PNG
 
+**Output**
 
-
-
+.. image:: https://i.imgur.com/HUBmzHd.gifv
