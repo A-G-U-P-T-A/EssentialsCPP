@@ -1,5 +1,5 @@
 =====================
-Usage
+Available Nodes
 =====================
 
 This section covers how to use some of the key features of EssentialCPP.
