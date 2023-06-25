@@ -117,6 +117,21 @@ It can take two types of inputs file path or a string. The hash string generated
 .. image:: features/images/UsingMessageDigest.PNG
 
 
+File Utility Library
+-----------------------
+
+This library provides multiple blueprint functions that allows you to perform various operations involving manipulation of files and directories. Here is a function that checks whether file exists or not.
+
+**Usage**
+
+.. image:: features/images/checkiffileexists.PNG
+
+**Output**
+
+.. image:: features/images/FileActuallyExists.PNG
+
+Similarly other data structures can be used.
+
 Data Structures
 -----------------------
 
