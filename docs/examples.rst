@@ -4,6 +4,30 @@ Examples
 
 Following are some blueprint examples of the functionalities provided:
 
+
+Array Library
+---------------
+
+Array Library provides various library functions and utilities to extend the funcitonality of the arrays.
+
+**Usage**
+
+Below shows the example code for the predicate filter (this allows users to create functions to filter data)
+
+.. image:: features/images/ExampleOfArrayUtilThiFunctionFiltersNegativeNumbers.PNG
+
+Following is the input array
+
+.. image:: features/images/ValuesInInpueArray.PNG
+
+Custom function
+
+.. image:: features/images/FilterNegativeNumbers.PNG
+
+**Output**
+
+.. image:: features/images/OutputOfThePredicateFilterFunction.PNG    
+
 Message Digest Library
 -----------------------
 
