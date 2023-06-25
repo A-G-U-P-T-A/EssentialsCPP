@@ -94,3 +94,7 @@ Here is the general setup done for demonstration purpose.
 
 .. image:: features/images/CallTimeReversalForAllActors.PNG
 
+
+**Output**
+
+.. image:: https://i.imgur.com/b42Rgg2.gif
