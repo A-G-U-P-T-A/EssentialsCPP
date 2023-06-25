@@ -4,6 +4,36 @@ Examples
 
 Following are some blueprint examples of the functionalities provided:
 
+Bar Compass Widget
+----------------------
+
+This widget adds a bar compass with an indicator to the hud of the player. (The images used are sample images found online used only for representation purpose. Please use your own image)
+
+**Usage**
+
+Following is the blueprint code that uses the widget
+
+.. image:: features/images/SettingUpBarCompass.PNG
+
+**Output**
+
+.. image:: https://i.imgur.com/lcVju9c.gif
+
+Torch Component
+----------------------
+
+This adds a light source to the character. This works well as a effect only for a first person character.
+
+**Usage**
+
+Following is the blueprint code that uses the component
+
+.. image:: features/images/UsingTorchComponent.PNG
+
+**Output**
+
+.. image:: https://i.imgur.com/g9In6Ox.gif
+
 
 Camera Zoom Component
 ----------------------
@@ -14,7 +44,7 @@ This Component Allows a character to toggle zoom in and zoom out. Add this compo
 
 Following is the blueprint code that uses the component
 
-.. image:: features/images/CodeForRedis.PNG
+.. image:: features/images/UsingTheZoomComponent.PNG
 
 **Output**
 
