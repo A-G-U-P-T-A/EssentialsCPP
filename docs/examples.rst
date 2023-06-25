@@ -72,3 +72,25 @@ Add the night vision component to the player character. Then do the following:
 **Output**
 
 .. image:: https://i.imgur.com/HUBmzHd.gif
+
+Time Reversal Component
+------------------------
+
+This component allows users to trace back path for actors consisting of static meshes (current works only for static meshes)
+
+**Usage**
+
+Here is the general setup done for demonstration purpose.
+
+1. Create an interace as shown Below
+
+.. image:: features/images/ExampleReverseTimeInterface.PNG
+
+2. Create an actor and implement the interface by adding it to the class. For this example I have called the recording start at event begin play. The reverse event when ever triggered, will stop the recording and reverse for a specific duration or based on the buffer size. When its called the recording is stopped and resumed once the reversal is over.
+
+.. image:: features/images/CallTheRecordReverseTimeAndOtherFunctionsWithAnyInterface.PNG
+
+3. The character or actor will trigger the event to call the reversal function for all the actors that implement the interface we created.
+
+.. image:: features/images/CallTimeReversalForAllActors.PNG
+
