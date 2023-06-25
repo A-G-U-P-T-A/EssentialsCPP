@@ -4,6 +4,22 @@ Examples
 
 Following are some blueprint examples of the functionalities provided:
 
+
+Camera Zoom Component
+----------------------
+
+This Component Allows a character to toggle zoom in and zoom out. Add this component from the menu to the character.
+
+**Usage**
+
+Following is the blueprint code that uses the component
+
+.. image:: features/images/CodeForRedis.PNG
+
+**Output**
+
+.. image:: https://i.imgur.com/VZ7uvK3.gif
+
 Redis Client
 --------------
 
