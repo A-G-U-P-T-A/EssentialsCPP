@@ -36,3 +36,6 @@ When running the same, we get the following results:
 **Output**
 
 .. image:: features/images/OutputForTheTrieFunctions.PNG
+
+Similarly other data structures can be used.
+
