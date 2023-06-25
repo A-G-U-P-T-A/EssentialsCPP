@@ -50,6 +50,23 @@ Following is the blueprint code that uses the component
 
 .. image:: https://i.imgur.com/VZ7uvK3.gif
 
+
+Time Dilation Component
+----------------------
+
+This Component allows users to create a time slow down effect while inversing the effect for the excluded actors giving the perception of time freeze or slow down.
+
+**Usage**
+
+Following is the blueprint code that uses the component. In this example the player character is allowed to move at normal pace while the other actors in the world are frozen.
+
+.. image:: features/images/CodeForSlowingDownTime.PNG
+
+**Output**
+
+.. image:: https://i.imgur.com/5elS0io.gif
+
+
 Redis Client
 --------------
 
