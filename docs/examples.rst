@@ -128,9 +128,12 @@ This library provides multiple blueprint functions that allows you to perform va
 
 **Output**
 
+.. image:: features/images/OutputAsTruForFile.PNG
+
+As you can see the file actually exists in the directory.
+
 .. image:: features/images/FileActuallyExists.PNG
 
-Similarly other data structures can be used.
 
 Data Structures
 -----------------------
