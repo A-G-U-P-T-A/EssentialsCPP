@@ -39,3 +39,19 @@ When running the same, we get the following results:
 
 Similarly other data structures can be used.
 
+Camera Auto Focus Component
+----------------------------
+
+As the component suggests the following helps to auto focus on certain objects and blurs out the back ground.
+
+**Usage**
+
+.. image:: features/images/CameraAutoFocusUsage.PNG
+
+**Without Auto Focus**
+
+.. image:: features/images/WithoutAnyAutoFocus.PNG
+
+**Output**
+
+.. image:: features/images/AutoFocusingonTheWall.PNG
