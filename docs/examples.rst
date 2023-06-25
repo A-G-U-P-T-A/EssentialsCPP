@@ -97,8 +97,4 @@ Here is the general setup done for demonstration purpose.
 
 **Output**
 
-.. raw:: html
-
-   <iframe src=".. image:: https://i.imgur.com/b42Rgg2.gifv" width="500" height="500" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-
-
+.. image:: https://i.imgur.com/b42Rgg2.gif
