@@ -1,5 +1,5 @@
 ========================
-Example Blueprint Usage
+Examples
 ========================
 
 Following are some blueprint examples of the functionalities provided:
@@ -11,7 +11,7 @@ Call the generate hash string and choose from a wide variety of encryption provi
 
 It can take two types of inputs file path or a string. The hash string generated can be base 64 encoded.
 
-**Input**
+**Usage**
 
 .. image:: features/images/UsingMessageDigest.PNG
 
