@@ -39,6 +39,7 @@ When running the same, we get the following results:
 
 Similarly other data structures can be used.
 
+
 Camera Auto Focus Component
 ----------------------------
 
@@ -55,3 +56,19 @@ As the component suggests the following helps to auto focus on certain objects a
 **Output**
 
 .. image:: features/images/AutoFocusingonTheWall.PNG
+
+
+Night Vision
+--------------
+
+As the name suggests it creates a night vision effect when enabled. 
+
+**Usage**
+
+Add the night vision component to the player character. Then do the following:
+
+.. image:: features/images/CodeForNightVision.PNG
+
+
+
+
