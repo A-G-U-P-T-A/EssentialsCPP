@@ -11,5 +11,6 @@ Welcome to the EssentialCPP plugin documentation!
    introduction
    installation
    nodes
+   examples
    faq
    troubleshooting
