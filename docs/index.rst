@@ -10,6 +10,6 @@ Welcome to the EssentialCPP plugin documentation!
 
    introduction
    installation
-   usage
+   nodes
    faq
    troubleshooting
