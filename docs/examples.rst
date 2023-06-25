@@ -214,3 +214,32 @@ Here is the general setup done for demonstration purpose.
 **Output**
 
 .. image:: https://i.imgur.com/b42Rgg2.gif
+
+
+Universal Interaction Component
+--------------------------------
+
+Following component allows a character to interact with other actors. (Currently the inspect actor is implemented)
+
+**Usage**
+
+To use the inspect actor, create a blueprint from the inspect actor as shown below.
+
+.. image:: features/images/CreateABlueprintForInspectActor.png
+
+Then add a static mesh to the inspect actor.
+
+Place the actor in the world. 
+
+Now in the character add the universal Interaction component. Once done setup as following:-
+
+.. image:: features/images/SetupForUniversalInteractionComponent.PNG
+
+And that's it. The entire setup is now done.
+
+**Output**
+
+.. image:: https://i.imgur.com/uHkhUzq.gif
+
+As shown, the player has to overlap the collision component of the inspected & look at it as well actor in order to inspect it.
+
