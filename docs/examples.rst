@@ -4,6 +4,20 @@ Examples
 
 Following are some blueprint examples of the functionalities provided:
 
+Redis Client
+--------------
+
+We have exposed the functionality of redis++ library via blueprint.
+
+**Usage**
+
+Following is a simple code that calls the increment function to increment value of an integer after connecting with redis. For testing purpose I ran a redis instance on "Windows Subsystem for Linux"
+
+.. image:: features/images/CodeForRedis.PNG
+
+Post running the blueprint following was the outcome
+
+.. image:: features/images/TestNumSetTo2.PNG
 
 Array Library
 ---------------
